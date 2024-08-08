@@ -55,46 +55,6 @@
 \fi
 
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -126,7 +86,6 @@
 
 
 \usepackage{orcidlink}
-\usepackage{lineno}
 \definecolor{mypink}{RGB}{219, 48, 122}
 \RequirePackage[numbers,super]{natbib}
 \makeatletter
@@ -230,7 +189,7 @@ findings. No references are allowed in this section.
 \maketitle
 %  Click the title above to edit the author information and abstract
 
-\thispagestyle{empty}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, interior hidden, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\thispagestyle{empty}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, enhanced, boxrule=0pt, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
 Please note: Abbreviations should be introduced at the first mention in
 the main text -- no abbreviations lists or tables should be included.
@@ -353,7 +312,7 @@ current dataset.
 \section{References}\label{references}}
 
 \renewcommand{\bibsection}{}
-\bibliography{bibliography.bib}
+\bibliography{sample.bib}
 
 \hypertarget{acknowledgements-not-compulsory}{%
 \section{Acknowledgements (not
@@ -436,275 +395,6 @@ made available in the online version only. Any such tables must be
 labelled in the text as `Online-only' tables and numbered separately
 from the main table list e.g.~`Table 1, Table 2, Online-only Table 1'
 etc.
-
-Everything for the extensions is in \texttt{\_extensions}. See Quarto
-doc for details.
-
-\begin{itemize}
-\item
-  In \texttt{partials}, you'll find the \texttt{.tex} partials that can
-  be used and should be removed or tweaked,s
-\item
-  Your extension can make shortcodes and lua filters available. This
-  document shows the effect of the one provided in the \texttt{aft}
-  format.
-\item
-  \texttt{aft} format sets some defaults which are different from
-  \texttt{pdf} or \texttt{html}, link setting links to URL in read
-  inside PDF output.
-\end{itemize}
-
-Source repository for this template format can found on
-\href{https://github.com/quarto-journals/article-format-template}{Github}
-
-\hypertarget{technical-validation-1}{%
-\section{Technical Validation}\label{technical-validation-1}}
-
-In this folder you'll find everything that defines the extensions which
-could be installed using \texttt{quarto\ install\ extension} or be part
-of the template when using \texttt{quarto\ use\ template}
-
-\hypertarget{format-metadata}{%
-\subsection{Format Metadata}\label{format-metadata}}
-
-\textasciitilde{} This is in \texttt{\_extension.yml} is where all the
-metadata about the format are defined so that Quarto knows what to use.
-Adapt this file for you own template.
-
-\hypertarget{partials}{%
-\subsection{Partials}\label{partials}}
-
-\textasciitilde{} In \texttt{partials}, there are the \texttt{.tex}
-files that will be used as Pandoc's template. We provide here all the
-partials supported by Quarto and custom one for this format. Quarto
-allows to provide partials to ease the process of tweaking the default
-latex Pandoc's template and keeping it up to date.\\
-This template repo contains all the relevant partials that you can use
-with Quarto \emph{as example}. We only tweaked \texttt{title.tex} to
-show the usage of a custom partials called \texttt{\_custom.tex}.\\
-\textbf{Only keep the partials that you need to tweak for the format you
-are creating}
-
-\begin{verbatim}
-If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on [`template.tex`](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex) and also using partials or not. This can be provided using the `template` YAML key in `_extension.yml` for Quarto to use it. 
-
-This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default `template.tex` content if you remove some specific parts.
-\end{verbatim}
-
-\hypertarget{usage-notes-1}{%
-\section{Usage Notes}\label{usage-notes-1}}
-
-\textasciitilde{} Most of the time, custom formats will need Lua filters
-to provide specific features like cross format supports or provides
-custom shortcodes through the Quarto extension mechanism. Those filters
-will be available to the user and could be used in the custom formats
-(according to \texttt{\_extensions} metadata). We have provided two
-examples:
-
-\begin{verbatim}
-- `color-text.lua`, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax
-- `shorcodes.lua`, a Lua filter which follow [Quarto custom shortcodes](https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes) guidelines to provide a `{{< LaTeX >}}` shortcode to nicely print LaTeX in PDF and HTML. 
-
-**Remove or replace with your own Lua filters**
-\end{verbatim}
-
-\hypertarget{code-availability-1}{%
-\section{Code availability}\label{code-availability-1}}
-
-\textasciitilde{} Resources required by the format needs to be
-available. We have provided two examples:
-
-\begin{verbatim}
-- `te.bst` is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence [LPPL](https://www.latex-project.org/lppl/)
-- `aft.cls` is a dummy class file for this example format. It is a copy of official `article.cls`, the one provided in LaTeX installation (i.e at `kpsewhich article.cls`) and renamed as example (Licence LaTeX Project Public License)
-- `custom.scss` is a style file to have a custom theme for our HTML format so that our Lua filter feature `color-tex.lua` works.
-
-Those files are referenced within the `_extension.yml` to be used with our example format.
-
-**Remove and replace with your own resources**
-\end{verbatim}
-
-\begin{description}
-\item[\texttt{.quartoignore}]
-Sometimes it is useful to have some files only needed for reference or
-for development. They should be available in the source repository but
-not downloaded to the user when \texttt{quarto\ use\ template} is used.
-
-\textbf{Use \texttt{.quartoignore} to register such file and folder (one
-file or folder per line)}
-\item[\texttt{style-guide} folder]
-For \texttt{quarto-journals} format, use \texttt{style-guide} folder to
-include any documentation and resourced used for format creation, like a
-journal style guide or original \texttt{.tex} template. This folder is
-already added in \texttt{.quartoignore} in this example repo.
-
-\textbf{Remove, rename or add to this folder}
-\item[\texttt{template.qmd}]
-This file is the template document that shows how to use the custom
-format. It will be downloaded with other resource by
-\texttt{quarto\ use\ template}, and even offered to be renamed if the
-name \texttt{template.qmd} is used.
-
-This file will usually use the custom format (here \texttt{aft-pdf} and
-\texttt{aft-html}) and show how to use the template. When you'll copy
-this template, you should be able to render this document to the demo
-format.
-
-\textbf{Adapt this file to provide a suitable template for your custom
-format}
-\item[Other files]
-Other files are needed by the template and are usually user provided -
-they are not part of the custom format.
-
-Here \texttt{bibliography.bib} is here to demo the usage of the bst file
-from the custom format.
-
-\textbf{Remove this file and provide a suitable one for your template}
-\end{description}
-
-\newpage{}
-
-\hypertarget{checklist-creating-a-custom-format}{%
-\subsection{Checklist: Creating a custom
-format}\label{checklist-creating-a-custom-format}}
-
-Here is the checklist to help you know what to modify:
-
-\begin{itemize}
-\tightlist
-\item
-  Read the resources mentioned at the top,
-\item
-  Use this template repo to create a new repository for your format
-  (Click on ``Use this template'' to create new github repo)
-\item
-  Once you are acquainted with the content, remove the resources that
-  are there only as example (see above)
-\item
-  Update README by replacing \texttt{aft} and
-  \texttt{Article\ Format\ Template} mentions for your journal format
-\item
-  Keep only the template partials that you need to tweak, and add custom
-  ones if needed
-\item
-  Add any Lua filters for shortcodes and other that would be useful to
-  create the expected output format
-\item
-  Add any external resource your format will need, and that should be
-  part of the extension format that will be downloaded,
-\item
-  Check \texttt{\_extension.yml} is updated correctly
-\item
-  Modify the skeleton \texttt{template.qmd} to your format and add any
-  required resources to be downloaded to user.
-\item
-  Check \texttt{.quartoignore} is updated which everything that should
-  not be downloaded.
-\item
-  Publish a demo of you format to github pages of the repo by using
-  \texttt{quarto\ publish} command
-\end{itemize}
-
-\hypertarget{demo-of-some-features-found-in-this-demo-journal-template}{%
-\subsection{Demo of some features found in this demo journal
-template}\label{demo-of-some-features-found-in-this-demo-journal-template}}
-
-\hypertarget{sec-shortcode}{%
-\subsubsection{Shortcode demo}\label{sec-shortcode}}
-
-PDF are rendered using {\LaTeX} but it is best if one can use a Markdown
-syntax for cross format support.
-
-\texttt{} used in source is a shortcode syntax where the shortcode is
-included in the extension folder \texttt{\_extensions}
-
-\hypertarget{sec-chunks}{%
-\subsubsection{Code chunk}\label{sec-chunks}}
-
-This format hide chunks by default as option has been set in
-\texttt{\_extension.yml} file.
-
-But you can set \texttt{echo} option to \texttt{true} locally in the
-chunk
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{m\_pois }\OtherTok{\textless{}{-}} \FunctionTok{glm}\NormalTok{(Days }\SpecialCharTok{\textasciitilde{}}\NormalTok{ (Eth }\SpecialCharTok{+}\NormalTok{ Sex }\SpecialCharTok{+}\NormalTok{ Age }\SpecialCharTok{+}\NormalTok{ Lrn)}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{, }\AttributeTok{data =}\NormalTok{ quine, }\AttributeTok{family =}\NormalTok{ poisson)}
-\FunctionTok{summary}\NormalTok{(m\_pois)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-
-Call:
-glm(formula = Days ~ (Eth + Sex + Age + Lrn)^2, family = poisson, 
-    data = quine)
-
-Coefficients: (1 not defined because of singularities)
-            Estimate Std. Error z value Pr(>|z|)    
-(Intercept)  2.93246    0.09826  29.843  < 2e-16 ***
-EthN        -0.17399    0.12134  -1.434   0.1516    
-SexM        -0.71452    0.12229  -5.843 5.14e-09 ***
-AgeF1       -0.04270    0.12691  -0.336   0.7365    
-AgeF2       -0.08632    0.16164  -0.534   0.5933    
-AgeF3       -0.15290    0.11898  -1.285   0.1987    
-LrnSL        0.21608    0.14558   1.484   0.1377    
-EthN:SexM    0.43902    0.09208   4.768 1.86e-06 ***
-EthN:AgeF1  -0.92889    0.14657  -6.337 2.34e-10 ***
-EthN:AgeF2  -1.33398    0.13504  -9.879  < 2e-16 ***
-EthN:AgeF3  -0.11242    0.13478  -0.834   0.4042    
-EthN:LrnSL   0.26415    0.11378   2.322   0.0203 *  
-SexM:AgeF1  -0.05565    0.16303  -0.341   0.7328    
-SexM:AgeF2   1.09942    0.15281   7.195 6.26e-13 ***
-SexM:AgeF3   1.15949    0.13859   8.366  < 2e-16 ***
-SexM:LrnSL   0.04143    0.13718   0.302   0.7627    
-AgeF1:LrnSL -0.13019    0.15688  -0.830   0.4066    
-AgeF2:LrnSL  0.37340    0.14563   2.564   0.0103 *  
-AgeF3:LrnSL       NA         NA      NA       NA    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-(Dispersion parameter for poisson family taken to be 1)
-
-    Null deviance: 2073.5  on 145  degrees of freedom
-Residual deviance: 1368.7  on 128  degrees of freedom
-AIC: 1993.1
-
-Number of Fisher Scoring iterations: 5
-\end{verbatim}
-
-\hypertarget{sec-summary}{%
-\subsubsection{Text color}\label{sec-summary}}
-
-Our format makes applying color on inline text possible using the
-\texttt{{[}content{]}\{color=\textless{}name\textgreater{}\}} syntax.
-Let's see an example.
-
-Here we are using a special feature of our format which is the coloring
-because \textcolor{mypink}{pink is a \textbf{nice} color}.
-
-This is possible thanks to the Lua Filter included in the custom
-extension format.
-
-\hypertarget{using-references}{%
-\subsubsection*{Using references}\label{using-references}}
-\addcontentsline{toc}{subsubsection}{Using references}
-
-I did not read this book \citep{behringer2014manipulating} but it must
-be interesting.
-
-Differences between \texttt{aft-html} and \texttt{aft-pdf}:
-
-\begin{itemize}
-\tightlist
-\item
-  For the HTML format, we are using Pandoc citeproc to include the
-  bibliography. Here \texttt{reference-section-title} controls the title
-  for the chapter that will be used.
-\item
-  For the PDF format, \texttt{natbib} is used by default and the
-  bibliography is included with a title by the LaTeX template.
-\end{itemize}
 
 
 
