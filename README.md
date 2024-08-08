@@ -1,4 +1,4 @@
-# Scientific Data Format Template (AFT)
+# Scientific Data Quarto template
 
 This is a Quarto template that assists you in creating a manuscript for *Scientific Data*. You can learn more about ...
 
