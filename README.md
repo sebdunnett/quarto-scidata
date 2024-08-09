@@ -12,7 +12,7 @@ quarto use template sebdunnett/quarto-scidata
 
 This will install the extension and create an example qmd file and bibiography that you can use as a starting place for your article.
 
-## Installation For Existing Document
+## Installation for existing document
 
 You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
 
@@ -32,7 +32,7 @@ or in your document yaml
 
 ```yaml
 format:
-  html: default
+  scidata-html: default
   scidata-pdf:
     keep-tex: true    
 ```
