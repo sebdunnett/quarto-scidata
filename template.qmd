@@ -5,11 +5,11 @@ format:
     keep-tex: true  
   scidata-html: default
 lineno: true #line numbers?
-#set to true if some authors contributed equally
-#because let's face it, it was easier than implementing in pandoc
+#set equal-authors to true if any authors contributed equally
+#(because let's face it, it was easier than implementing in pandoc)
 equal-authors: true
 author:
-- name: Christine Author
+- name: Alice Author
   affiliations:
   - id: uni
     number: 1
@@ -18,14 +18,10 @@ author:
     city: City
     country: Country
     postal-code: CNT TRY
-  email: Christine.Author@bigolduni.edu
+  orcid: 0000-0001-1122-3555
+  email: Alice.Author@bigolduni.edu
   equal-contributor: true
-- name: Derek Author
-  affiliations:
-  - ref: uni
-  email: Derek.Author@bigolduni.edu
-  equal-contributor: true
-- name: Sam Author
+- name: Bob Author
   affiliations:
   - id: research
     number: 2
@@ -35,7 +31,20 @@ author:
     country: Country
     postal-code: CNT TRY
   orcid: 0000-0001-1122-3555
-  email: Sam Author@researchinst.org
+  email: Bob.Author@researchinst.org
+  equal-contributor: true
+- name: Christine Author
+  affiliations:
+  - ref: uni
+  - ref: research
+  orcid: 0000-0001-1122-3555
+  email: Christine.Author@bigolduni.edu
+  equal-contributor: false
+- name: Derek Author
+  affiliations:
+  - ref: research
+  orcid: 0000-0001-1122-3555
+  email: corresponding.author@email.example
   equal-contributor: false
   corresponding: true
 abstract: |
@@ -107,7 +116,7 @@ The corresponding author is responsible for providing a [competing interest stat
 
 # Figures & Tables
 
-Figures, tables, and their legends, should be included at the end of the document. Figures and tables can be referenced in Quarto using `![caption](source_to_figure.jpg)`, e.g. @fig-stream and @tbl-example.
+Figures, tables, and their legends, should be included at the end of the document. Figures and tables are easily included with Quarto, e.g. @fig-stream and @tbl-example. See the relevant Quarto documentation for [figures](https://quarto.org/docs/authoring/figures.html) and [tables](https://quarto.org/docs/authoring/tables.html).
 
 ![Legend (350 words max). Example legend text.](stream.jpg){#fig-stream}
 

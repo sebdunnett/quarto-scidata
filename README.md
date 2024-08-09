@@ -1,13 +1,13 @@
-# Scientific Data Quarto template
+# *Scientific Data* Data Descriptor template
 
-This is a Quarto template that assists you in creating a manuscript for *Scientific Data*. You can learn more about ...
+This is a Quarto template that assists you in creating a Data Descriptor for [*Scientific Data*](https://www.nature.com/sdata/). You can learn more about publishing with *Scientific Data* on their [For Authors](https://www.nature.com/sdata/author-instructions) webpage.
 
-## Creating a New Article
+## Creating a new article
 
-You can use this as a template to create an article for an AFT journal. To do this, use the following command:
+To start, use the following command:
 
 ```bash
-quarto use template sebdunnett/scidata-template
+quarto use template sebdunnett/quarto-scidata
 ```
 
 This will install the extension and create an example qmd file and bibiography that you can use as a starting place for your article.
@@ -17,7 +17,7 @@ This will install the extension and create an example qmd file and bibiography t
 You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
 
 ```bash
-quarto install extension sebdunnett/scidata-template
+quarto install extension sebdunnett/quarto-scidata
 ```
 
 ## Usage
@@ -32,9 +32,9 @@ or in your document yaml
 
 ```yaml
 format:
-  pdf: default
+  html: default
   scidata-pdf:
     keep-tex: true    
 ```
 
-You can view a preview of the rendered template at <https://sebdunnett.com/quarto-scidata/>.
+You can view a preview of the rendered PDF template at <https://sebdunnett.com/quarto-scidata/>.
