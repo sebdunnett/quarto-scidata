@@ -32,5 +32,4 @@ contributes:
     html:
       number-sections: true
       toc: true
-      theme: custom.scss
       csl: https://www.zotero.org/styles/nature
